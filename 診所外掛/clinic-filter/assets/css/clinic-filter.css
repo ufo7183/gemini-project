@@ -1,0 +1,357 @@
+/* =========== 全域樣式 =========== */
+.clinic-filter-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #212529;
+}
+
+/* =========== 篩選表單 =========== */
+.clinic-filter-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 表單行佈局 */
+.clinic-filter-container .row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+   
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* 表單項目 */
+.clinic-filter-container .row > div {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* 篩選表單網格佈局 */
+#clinic-filter-form {
+    display: grid;
+    grid-template-columns: 14% 34% 25% 25%;
+    grid-template-rows: 1fr;
+    column-gap: 8px;
+    width: 100%;
+}
+
+/* 重設篩選按鈕 */
+#reset-filters {
+    font-weight: 400;
+    color: #000;
+    background-color: #d3cabb;
+    font-size: 16px;
+    width: 100% !important;
+    height: 38px;
+    border: 1px solid #d3cabb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 搜尋欄位 */
+#clinic-keyword {
+    font-size: 16px;
+    width: 100% !important;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* 下拉選單 */
+.clinic-filter-container select {
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    padding: 6px 12px;
+    width: 100%;
+}
+
+/* 診所列表容器 */
+#clinic-list-container .clinic-list {
+    margin-top: 12px;
+}
+
+.clinic-filter-container{
+	padding-bottom:0px;
+	padding-top:0px;
+	padding-right:0px;
+	padding-left:0px;
+	background-color:#FFFFFF00;
+	
+}
+
+/* =========== 診所項目 =========== */
+.clinic-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    border-bottom: 1px solid #000;
+    
+}
+
+.clinic-item:hover {
+    background-color: #f2efea;
+}
+
+/* 子分類標籤 */
+.s-item-city {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.2;
+    font-family: var(--s-font-title, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: #d3cabb;
+    border-radius: 0.2rem;
+}
+
+/* 診所資訊 */
+.clinic-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 左側區塊 */
+.clinic-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* 右側區塊 */
+.clinic-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* 地址和電話 */
+.clinic-address,
+.clinic-phone {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* 連結樣式 */
+.clinic-item-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+/* =========== 響應式設計 =========== */
+/* 平板和較小桌面 */
+@media (max-width: 1023.98px) {
+    #clinic-filter-form {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .clinic-filter-container .row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .clinic-filter-container .btn-all-clinics,
+    .clinic-filter-container .search-box,
+    .clinic-filter-container .area-selector,
+    .clinic-filter-container .city-selector {
+        flex: 1 1 100% !important;
+        max-width: 100%;
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .clinic-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* 手機版 */
+@media (max-width: 767.98px) {
+    .clinic-item {
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+    
+    .clinic-info {
+        flex-direction: row;
+        margin-top: 10px;
+        padding-left: 55px;
+        width: 100%;
+    }
+    
+    .clinic-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* 右側區塊 */
+.clinic-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+/* 類別樣式 */
+.clinic-category {
+    position: relative;
+    margin-right: 15px;
+}
+
+.clinic-category span {
+    display: inline-block;
+    padding: 0.3rem;
+    vertical-align: baseline;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    font-family: var(--s-font-title, inherit);
+    font-size: 0.9rem;
+    color: rgba(var(--bs-white-rgb), 1);
+    background-color: rgba(var(--bs-primary-rgb), 1);
+    border-radius: 0.2rem;
+}
+
+/* 診所名稱樣式 */
+.clinic-name {
+    font-family: var(--s-font-title, inherit);
+    letter-spacing: var(--s-font-title-spacing, normal);
+    font-size: 1.2rem;
+    color: rgba(var(--bs-black-rgb), 1);
+    margin-right: 20px;
+}
+
+/* 地址和電話容器 */
+.clinic-info {
+    display: flex;
+    align-items: center;
+}
+
+/* 地址和電話共用樣式 */
+.clinic-address,
+.clinic-phone {
+    position: relative;
+    margin-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    opacity: 1;
+    display: inline-block;
+}
+
+/* 響應式設計 */
+/* 1439px 以下裝置 */
+@media (max-width: 1439px) {
+    .clinic-list .clinic-item-link .clinic-item {
+        border-bottom-color: #000;
+    }
+}
+
+/* 平板和手機版 */
+@media (max-width: 768px) {
+    .clinic-item {
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+    
+    /* 767px 以下裝置 */
+    @media (max-width: 767px) {
+        /* 診所名稱 */
+        .clinic-list .clinic-item .clinic-name {
+            font-weight: 500;
+        }
+        
+        /* 診所資訊 */
+        .clinic-list .clinic-item .clinic-info {
+            flex-direction: row;
+        }
+        
+        /* 右側資訊區塊 */
+        .clinic-list .clinic-item .clinic-right {
+            padding-left: 0;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        
+        /* 右側資訊區塊 */
+        .clinic-list .clinic-item .clinic-right {
+            border-top-width: 0;
+            justify-content: flex-start;
+            padding-left: 55px;
+            display: block;
+            width: 100%;
+        }
+    }
+    
+    .clinic-left,
+    .clinic-right {
+        width: 100%;
+        flex: none;
+    }
+    
+    .clinic-right {
+        margin-top: 10px;
+        padding-top: 10px;
+        
+    }
+    
+    .clinic-category,
+    .clinic-name,
+    .clinic-address,
+    .clinic-phone {
+        width: 100% !important;
+        padding: 3px 0;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .clinic-category {
+        margin-bottom: 5px;
+    }
+    
+    .clinic-address::after {
+        display: none;
+    }
+    
+    .clinic-phone {
+        margin-left: 0;
+    }
+    
+    .clinic-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .clinic-address,
+    .clinic-phone {
+        margin-left: 0;
+    }
+    
+   
+}
+
